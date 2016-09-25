@@ -1,1 +1,8 @@
 sudo apt-get install libmysqlclient-dev
+sudo apt-get install php-mbstring
+sudo apt-get install php-gettext
+
+
+Rscript "/var/www/html/TextDataPreProcessingR/WordsVector.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "Reuters 005-006 words vector"
+
+install.packages("home/jocan3/slam_0.1-37.tar.gz", repos = NULL, type="source")

@@ -13,14 +13,20 @@ args = commandArgs(trailingOnly=TRUE)
 
 
 representation <- 1
-datasetName <- "Oil-test"
+
+inputFile <- args[1]
+datasetName <- args[2]
+connectionsFile <- args[3]
+description <- args[4]
+
+#datasetName <- "Oil-test"
 #datasetName <- "reuters-1" 
 
 
 #inputFile <- "D:/Documents/Dropbox/Tesis II - Seminario/DataSets/Reuters/reuters-1.csv"
-inputFile <- "D:/GIT/TextSimilarity/Data/Oil/OilTrain.csv"
+#inputFile <- "D:/GIT/TextSimilarity/Data/Oil/OilTrain.csv"
 
-connectionsFile <- "D:/GIT/TextDataPreProcessingR/DBCredentials.R"
+#connectionsFile <- "D:/GIT/TextDataPreProcessingR/DBCredentials.R"
 
 dataSet = read.csv(inputFile)  # read csv file 
 
@@ -66,7 +72,7 @@ dat <- dbFetch(res)
 
 datasetId <- dat$id
 
-queryStr = paste("Insert into datasetrepresentation(dataset,representation,description) values(",datasetId,",",representation,",'with TF-IDF');",sep = "")
+queryStr = paste("Insert into datasetrepresentation(dataset,representation,description) values(",datasetId,",",representation,",'",description," with TF-IDF');",sep = "")
 dbSendQuery(mydb, queryStr)
 
 queryStr = paste("SELECT MAX(id) as id FROM datasetrepresentation", sep="")
@@ -94,8 +100,7 @@ for (i in 1:matrix$nrow){
     dbSendQuery(mydb, queryStr)
 }
 
-
-queryStr = paste("Insert into datasetrepresentation(dataset,representation,description) values(",datasetId,",",representation,",'without TF-IDF');",sep = "")
+queryStr = paste("Insert into datasetrepresentation(dataset,representation,description) values(",datasetId,",",representation,",'",description," without TF-IDF');",sep = "")
 dbSendQuery(mydb, queryStr)
 
 queryStr = paste("SELECT MAX(id) as id FROM datasetrepresentation", sep="")
