@@ -72,7 +72,7 @@ dat <- dbFetch(res)
 
 datasetId <- dat$id
 
-queryStr = paste("Insert into datasetrepresentation(dataset,representation,description) values(",datasetId,",",representation,",'",description," with TF-IDF');",sep = "")
+queryStr = paste("Insert into datasetrepresentation(dataset,representation,description,status) values(",datasetId,",",representation,",'",description," with TF-IDF','running');",sep = "")
 dbSendQuery(mydb, queryStr)
 
 queryStr = paste("SELECT MAX(id) as id FROM datasetrepresentation", sep="")
@@ -100,7 +100,13 @@ for (i in 1:matrix$nrow){
     dbSendQuery(mydb, queryStr)
 }
 
-queryStr = paste("Insert into datasetrepresentation(dataset,representation,description) values(",datasetId,",",representation,",'",description," without TF-IDF');",sep = "")
+
+
+queryStr = paste("update datasetrepresentation set status='successful' where id=",datasetrepresentation,";",sep = "")
+dbSendQuery(mydb, queryStr)
+
+
+queryStr = paste("Insert into datasetrepresentation(dataset,representation,description,status) values(",datasetId,",",representation,",'",description," without TF-IDF','running');",sep = "")
 dbSendQuery(mydb, queryStr)
 
 queryStr = paste("SELECT MAX(id) as id FROM datasetrepresentation", sep="")
@@ -128,6 +134,7 @@ for (i in 1:matrixNoTFIDF$nrow){
   dbSendQuery(mydb, queryStr)
 }
 
-
+queryStr = paste("update datasetrepresentation set status='successful' where id=",datasetrepresentation,";",sep = "")
+dbSendQuery(mydb, queryStr)
 
 
