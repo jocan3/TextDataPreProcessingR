@@ -1,6 +1,6 @@
 library(RTextTools)
 library(lda)
-
+library(RMySQL)
 
 args = commandArgs(trailingOnly=TRUE)
 
@@ -14,25 +14,53 @@ args = commandArgs(trailingOnly=TRUE)
 
 representation <- 2
 
-inputFile <- args[1]
-datasetName <- args[2]
-connectionsFile <- args[3]
-description <- args[4]
-alphaValue <- args[5]
-betaValue <- args[6]
+
+# inputFile <- args[1]
+# datasetName <- args[2]
+# connectionsFile <- args[3]
+# description <- args[4]
+# alphaValue <- args[5]
+# betaValue <- args[6]
 
 
-#datasetName <- "Oil-test"
-#datasetName <- "reuters-1" 
-#inputFile <- "D:/Documents/Dropbox/Tesis II - Seminario/DataSets/Reuters/reuters-1.csv"
+datasetName <- "Oil-test"
+datasetName <- "reuters-1" 
+inputFile <- "D:/Documents/Dropbox/Tesis II - Seminario/DataSets/Reuters/reuters-1.csv"
+alphaValue <- 0.2 
+betaValue <- 0.8
 #inputFile <- "D:/GIT/TextSimilarity/Data/Oil/OilTrain.csv"
 
-#connectionsFile <- "D:/GIT/TextDataPreProcessingR/DBCredentials.R"
+connectionsFile <- "D:/GIT/TextDataPreProcessingR/DBCredentials.R"
+
+
+
 
 dataSet = read.csv(inputFile)  # read csv file 
 
 texts <- dataSet$text
 annotations <- dataSet$class
+
+############################################## DB ACTIONS #########################################################
+
+# source(connectionsFile)
+# mydb = dbConnect(MySQL(), user=DBUser, password=DBPassword, dbname=DBName, host=DBHost)
+# 
+# queryStr = paste("SELECT * FROM dataset WHERE name = '",datasetName,"';", sep="")
+# res <- dbSendQuery(mydb, queryStr)
+# dat <- dbFetch(res)
+# 
+# datasetId <- dat$id
+# 
+# queryStr = paste("Insert into datasetrepresentation(dataset,representation,description,status) values(",datasetId,",",representation,",'",description," alpha: ",alphaValue," beta: ",betaValue," ','running');",sep = "")
+# dbSendQuery(mydb, queryStr)
+# 
+# queryStr = paste("SELECT MAX(id) as id FROM datasetrepresentation", sep="")
+# res <- dbSendQuery(mydb, queryStr)
+# dat <- dbFetch(res)
+# 
+# datasetrepresentation <- dat$id
+
+###################################################################################################################
 
 matrix <- create_matrix(dataSet$text, language="english",
                         removeNumbers=TRUE, stemWords=FALSE, removeStopwords=TRUE, 
@@ -67,45 +95,33 @@ result <- slda.em(documents=corpus,
                   method="sLDA")
 
 
-source(connectionsFile)
-mydb = dbConnect(MySQL(), user=DBUser, password=DBPassword, dbname=DBName, host=DBHost)
-
-queryStr = paste("SELECT * FROM dataset WHERE name = '",datasetName,"';", sep="")
-res <- dbSendQuery(mydb, queryStr)
-dat <- dbFetch(res)
-
-datasetId <- dat$id
-
-queryStr = paste("Insert into datasetrepresentation(dataset,representation,description,status) values(",datasetId,",",representation,",'",description," alpha: ",alphaValue," beta: ",betaValue," ','running');",sep = "")
-dbSendQuery(mydb, queryStr)
-
-queryStr = paste("SELECT MAX(id) as id FROM datasetrepresentation", sep="")
-res <- dbSendQuery(mydb, queryStr)
-dat <- dbFetch(res)
-
-datasetrepresentation <- dat$id
 
 line <- annotations.levels[1]
 for (i in 2:num.topics){
   line <- paste(line,annotations.levels[i],sep = ",")
 }
 
-queryStr = paste("Insert into document(datasetRepresentation,original,value,class) values(",datasetrepresentation,",'N/A','",line,"','N/A');",sep = "")
-dbSendQuery(mydb, queryStr)
 
-num.documents <- length(annotations)
+############################################## DB ACTIONS #########################################################
 
-for (i in 1:num.documents){
-  line <- result$model$model$z.bar.[i,1]
-  for (j in 2:num.topics){
-    line <- paste(line,result$model$model$z.bar.[i,j],sep = ",")
-  }
-  queryStr = paste("Insert into document(datasetRepresentation,original,value,class) values(",datasetrepresentation,",'",texts[i],"','",line,"','",annotations[i],"');",sep = "")
-  dbSendQuery(mydb, queryStr)
-}
+# queryStr = paste("Insert into document(datasetRepresentation,original,value,class) values(",datasetrepresentation,",'N/A','",line,"','N/A');",sep = "")
+# dbSendQuery(mydb, queryStr)
+# 
+# num.documents <- length(annotations)
+# 
+# for (i in 1:num.documents){
+#   line <- result$model$model$z.bar.[i,1]
+#   for (j in 2:num.topics){
+#     line <- paste(line,result$model$model$z.bar.[i,j],sep = ",")
+#   }
+#   queryStr = paste("Insert into document(datasetRepresentation,original,value,class) values(",datasetrepresentation,",'",texts[i],"','",line,"','",annotations[i],"');",sep = "")
+#   dbSendQuery(mydb, queryStr)
+# }
+# 
+# queryStr = paste("update datasetrepresentation set status='successful' where id=",datasetrepresentation,";",sep = "")
+# dbSendQuery(mydb, queryStr)
 
-queryStr = paste("update datasetrepresentation set status='successful' where id=",datasetrepresentation,";",sep = "")
-dbSendQuery(mydb, queryStr)
+###################################################################################################################
 
 
 
