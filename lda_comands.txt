@@ -1,0 +1,33 @@
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.50" "0.2" "0.8" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.75" "0.2" "0.8" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.80" "0.2" "0.8" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.50" "0.8" "0.2" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.75" "0.8" "0.2" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.80" "0.8" "0.2" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.50" "0.5" "0.5" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.75" "0.5" "0.5" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.80" "0.5" "0.5" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.50" "0.8" "0.8" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.75" "0.8" "0.8" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.80" "0.8" "0.8" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.50" "0.2" "0.2" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.75" "0.2" "0.2" "1"
+
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.80" "0.2" "0.2" "1"
+
+
+
+

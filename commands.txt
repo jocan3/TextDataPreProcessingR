@@ -2,10 +2,9 @@ sudo apt-get install libmysqlclient-dev
 sudo apt-get install php-mbstring
 sudo apt-get install php-gettext
 
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/OilTrain.csv" "Oil-test" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.75" "0.2" "0.8" "1"
 
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "Reuters 005-006 LDA (100 em iterations & 0.25 variance)" "0.2" "0.8"
+Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.75" "0.2" "0.8" "1"
 
 install.packages("home/jocan3/slam_0.1-37.tar.gz", repos = NULL, type="source")
 
-
-SWEDISH TRADE SURPLUS RISES IN FEBRUARY STOCKHOLM March 14 Sweden s trade surplus rose to 3 6 billion crowns in February from 1 5 billion in January and 3 48 billion in February 1986 the Central Bureau of Statistics said The trade surplus for the first two months of the year rose to 5 1 billion crowns from 4 9 billion in the corresponding period of 1986 The report said February imports stood at 20 1 billion crowns while exports were 23 7 billion REUTER 
