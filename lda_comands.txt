@@ -1,33 +1,161 @@
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.50" "0.2" "0.8" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.75" "0.2" "0.8" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.80" "0.2" "0.8" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.50" "0.8" "0.2" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.75" "0.8" "0.2" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.80" "0.8" "0.2" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.50" "0.5" "0.5" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.75" "0.5" "0.5" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.80" "0.5" "0.5" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.50" "0.8" "0.8" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.75" "0.8" "0.8" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.80" "0.8" "0.8" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.50" "0.2" "0.2" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.75" "0.2" "0.2" "1"
-
-Rscript "/var/www/html/TextDataPreProcessingR/SupervisedLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/TextDataPreProcessingR/DBCredentials.R" "0.80" "0.2" "0.2" "1"
-
-
-
-
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.2 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.2 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.8 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.8 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.8 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.5 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.5 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.5 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.2 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.2 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.2 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.8 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.8 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.8 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.5 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.5 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.5 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.2 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.2 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.2 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.8 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.8 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.8 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.5 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.5 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.5 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.2 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.2 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.2 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.8 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.8 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.8 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.5 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.5 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.2 	0.5 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.2 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.2 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.2 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.8 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.8 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.8 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.5 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.5 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.8 	0.5 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.2 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.2 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.2 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.8 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.8 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.8 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.5 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.5 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.5 	0.5 	0.5 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.2 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.2 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.2 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.8 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.8 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.8 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.5 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.5 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.5 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.2 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.2 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.2 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.8 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.8 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.8 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.5 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.5 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.5 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.2 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.2 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.2 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.8 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.8 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.8 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.5 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.5 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.5 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.2 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.2 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.2 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.8 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.8 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.8 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.5 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.5 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.2 	0.5 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.2 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.2 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.2 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.8 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.8 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.8 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.5 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.5 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.8 	0.5 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.2 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.2 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.2 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.8 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.8 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.8 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.5 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.5 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.75 	0.5 	0.5 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.2 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.2 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.2 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.8 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.8 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.8 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.5 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.5 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.5 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.2 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.2 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.2 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.8 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.8 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.8 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.5 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.5 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.5 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.2 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.2 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.2 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.8 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.8 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.8 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.5 	1 	100 	50 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.5 	1 	100 	50 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.5 	1 	100 	50 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.2 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.2 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.2 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.8 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.8 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.8 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.5 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.5 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.2 	0.5 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.2 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.2 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.2 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.8 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.8 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.8 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.5 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.5 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.8 	0.5 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.2 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.2 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.2 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.8 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.8 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.8 	1 	10 	4 	0.5 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.5 	1 	10 	4 	0.2 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.5 	1 	10 	4 	0.8 
+Rscript /var/www/html/TextDataPreProcessingR/SupervisedLDA.R /var/www/html/TextDataPreProcessingR/data/reuters-1.csv 	reuters-1 	/var/www/html/TextDataPreProcessingR/DBCredentials.R 	0.8 	0.5 	0.5 	1 	10 	4 	0.5 

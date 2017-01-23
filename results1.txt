@@ -1,0 +1,24 @@
+SELECT id FROM `result` WHERE experiment in (select i.experiment from imputationlda i inner join experiment e on i.experiment = e.id) and variable_name = 'accuracy' order by variable_value desc
+
+
+SELECT * FROM `experiment` WHERE id in (
+950,
+957,
+947,
+956,
+1045,
+997,
+1009,
+962,
+958,
+1050
+) 
+
+
+LDA reuters-1 . alpha: 0.8 . beta: 0.8 . Train: 50 %. Iterations: 10 - 4 . Variance: 0.5 .. Algorithm: LDA (No ensemble). Metric: N/A. K=N/A. Train=50% Test=50%.
+LDA reuters-1 . alpha: 0.5 . beta: 0.8 . Train: 50 %. Iterations: 10 - 4 . Variance: 0.2 .. Algorithm: LDA (No ensemble). Metric: N/A. K=N/A. Train=50% Test=50%.
+LDA reuters-1 . alpha: 0.8 . beta: 0.2 . Train: 50 %. Iterations: 10 - 4 . Variance: 0.5 .. Algorithm: LDA (No ensemble). Metric: N/A. K=N/A. Train=50% Test=50%.
+LDA reuters-1 . alpha: 0.5 . beta: 0.2 . Train: 50 %. Iterations: 10 - 4 . Variance: 0.5 .. Algorithm: LDA (No ensemble). Metric: N/A. K=N/A. Train=50% Test=50%.
+LDA reuters-1 . alpha: 0.5 . beta: 0.8 . Train: 80 %. Iterations: 100 - 50 . Variance: dynamic .. Algorithm: LDA (No ensemble). Metric: N/A. K=N/A. Train=80% Test=20%.
+LDA reuters-1 . alpha: 0.2 . beta: 0.5 . Train: 75 %. Iterations: 10 - 4 . Variance: 0.8 .. Algorithm: LDA (No ensemble). Metric: N/A. K=N/A. Train=75% Test=25%.
+LDA reuters-1 . alpha: 0.5 . beta: 0.8 . Train: 50 %. Iterations: 100 - 50 . Variance: dynamic .. Algorithm: LDA (No ensemble). Metric: N/A. K=N/A. Train=50% Test=50%.

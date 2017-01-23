@@ -1,0 +1,102 @@
+1 - R WordsVectorLDA
+
+(DEV)
+
+Rscript "/var/www/html/dev/TextDataPreProcessingR/WordsVectorLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/dev/TextDataPreProcessingR/DBCredentials.R" "Reuters 005-006 LDA words vector 0.5" "0.5"
+Rscript "/var/www/html/dev/TextDataPreProcessingR/WordsVectorLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/dev/TextDataPreProcessingR/DBCredentials.R" "Reuters 005-006 LDA words vector 0.75" "0.75"
+Rscript "/var/www/html/dev/TextDataPreProcessingR/WordsVectorLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-1.csv" "reuters-1" "/var/www/html/dev/TextDataPreProcessingR/DBCredentials.R" "Reuters 005-006 LDA words vector 0.8" "0.8"
+
+Rscript "/var/www/html/dev/TextDataPreProcessingR/WordsVectorLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-2.csv" "reuters-2" "/var/www/html/dev/TextDataPreProcessingR/DBCredentials.R" "Reuters 003-004 LDA words vector 0.5" "0.5"
+Rscript "/var/www/html/dev/TextDataPreProcessingR/WordsVectorLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-2.csv" "reuters-2" "/var/www/html/dev/TextDataPreProcessingR/DBCredentials.R" "Reuters 003-004 LDA words vector 0.75" "0.75"
+Rscript "/var/www/html/dev/TextDataPreProcessingR/WordsVectorLDA.R" "/var/www/html/TextDataPreProcessingR/data/reuters-2.csv" "reuters-2" "/var/www/html/dev/TextDataPreProcessingR/DBCredentials.R" "Reuters 003-004 LDA words vector 0.8" "0.8"
+
+
+2 - Files to be saved:
+
+reuters-1-50.csv
+reuters-1-75.csv
+reuters-1-80.csv
+reuters-2-50.csv
+reuters-2-75.csv
+reuters-2-80.csv
+
+reuters-1-50-test.csv
+reuters-1-75-test.csv
+reuters-1-80-test.csv
+reuters-2-50-test.csv
+reuters-2-75-test.csv
+reuters-2-80-test.csv
+
+3 - Commands to Parse files with C#
+
+"D:\GIT\sLDAInputFileFormatter\data\reuters-1-50.csv"  "D:\GIT\sLDAInputFileFormatter\data\transformed" "reuters-1-50" "2"
+"D:\GIT\sLDAInputFileFormatter\data\reuters-1-75.csv"  "D:\GIT\sLDAInputFileFormatter\data\transformed" "reuters-1-75" "2"
+"D:\GIT\sLDAInputFileFormatter\data\reuters-1-80.csv"  "D:\GIT\sLDAInputFileFormatter\data\transformed" "reuters-1-80" "2"
+"D:\GIT\sLDAInputFileFormatter\data\reuters-2-50.csv"  "D:\GIT\sLDAInputFileFormatter\data\transformed" "reuters-2-50" "2"
+"D:\GIT\sLDAInputFileFormatter\data\reuters-2-75.csv"  "D:\GIT\sLDAInputFileFormatter\data\transformed" "reuters-2-75" "2"
+"D:\GIT\sLDAInputFileFormatter\data\reuters-2-80.csv"  "D:\GIT\sLDAInputFileFormatter\data\transformed" "reuters-2-80" "2"
+
+"D:\GIT\sLDAInputFileFormatter\data\reuters-1-50-test.csv"  "D:\GIT\sLDAInputFileFormatter\data\transformed" "reuters-1-50-test" "3" "D:\GIT\sLDAInputFileFormatter\data\transformed\reuters-1-50_labels.txt"
+"D:\GIT\sLDAInputFileFormatter\data\reuters-1-75-test.csv"  "D:\GIT\sLDAInputFileFormatter\data\transformed" "reuters-1-75-test" "3" "D:\GIT\sLDAInputFileFormatter\data\transformed\reuters-1-75_labels.txt"
+"D:\GIT\sLDAInputFileFormatter\data\reuters-1-80-test.csv"  "D:\GIT\sLDAInputFileFormatter\data\transformed" "reuters-1-80-test" "3" "D:\GIT\sLDAInputFileFormatter\data\transformed\reuters-1-80_labels.txt"
+"D:\GIT\sLDAInputFileFormatter\data\reuters-2-50-test.csv"  "D:\GIT\sLDAInputFileFormatter\data\transformed" "reuters-2-50-test" "3" "D:\GIT\sLDAInputFileFormatter\data\transformed\reuters-2-50_labels.txt"
+"D:\GIT\sLDAInputFileFormatter\data\reuters-2-75-test.csv"  "D:\GIT\sLDAInputFileFormatter\data\transformed" "reuters-2-75-test" "3" "D:\GIT\sLDAInputFileFormatter\data\transformed\reuters-2-75_labels.txt"
+"D:\GIT\sLDAInputFileFormatter\data\reuters-2-80-test.csv"  "D:\GIT\sLDAInputFileFormatter\data\transformed" "reuters-2-80-test" "3" "D:\GIT\sLDAInputFileFormatter\data\transformed\reuters-2-80_labels.txt"
+
+4 - Move files to "/var/www/html/LDACpp/data"
+
+
+5 - Commands to run cpp sLDA
+
+Alpha 08 - 05 - 02
+
+slda [est] [data] [label] [settings] [alpha] [k] [seeded/random/model_path] [directory]
+
+./slda est "/var/www/html/LDACpp/data/reuters-1/reuters-1-50_data.txt" "/var/www/html/LDACpp/data/reuters-1/reuters-1-50_labels_int.txt" "/var/www/html/LDACpp/slda/settings.txt" 0.8 44 seeded "/var/www/html/LDACpp/data/reuters-1/08/50"
+./slda est "/var/www/html/LDACpp/data/reuters-1/reuters-1-50_data.txt" "/var/www/html/LDACpp/data/reuters-1/reuters-1-50_labels_int.txt" "/var/www/html/LDACpp/slda/settings.txt" 0.5 44 seeded "/var/www/html/LDACpp/data/reuters-1/05/50"
+./slda est "/var/www/html/LDACpp/data/reuters-1/reuters-1-50_data.txt" "/var/www/html/LDACpp/data/reuters-1/reuters-1-50_labels_int.txt" "/var/www/html/LDACpp/slda/settings.txt" 0.2 44 seeded "/var/www/html/LDACpp/data/reuters-1/02/50"
+
+./slda est "/var/www/html/LDACpp/data/reuters-1/reuters-1-75_data.txt" "/var/www/html/LDACpp/data/reuters-1/reuters-1-75_labels_int.txt" "/var/www/html/LDACpp/slda/settings.txt" 0.8 44 seeded "/var/www/html/LDACpp/data/reuters-1/08/75"
+./slda est "/var/www/html/LDACpp/data/reuters-1/reuters-1-75_data.txt" "/var/www/html/LDACpp/data/reuters-1/reuters-1-75_labels_int.txt" "/var/www/html/LDACpp/slda/settings.txt" 0.5 44 seeded "/var/www/html/LDACpp/data/reuters-1/05/75"
+./slda est "/var/www/html/LDACpp/data/reuters-1/reuters-1-75_data.txt" "/var/www/html/LDACpp/data/reuters-1/reuters-1-75_labels_int.txt" "/var/www/html/LDACpp/slda/settings.txt" 0.2 44 seeded "/var/www/html/LDACpp/data/reuters-1/02/75"
+
+
+slda [inf] [data] [label] [settings] [model] [directory]
+
+./slda inf "/var/www/html/LDACpp/data/reuters-1/reuters-1-50-test_data.txt" "/var/www/html/LDACpp/data/reuters-1/reuters-1-50-test_labels_int.txt" "/var/www/html/LDACpp/slda/settings.txt" "/var/www/html/LDACpp/data/reuters-1/08/50/final.model" "/var/www/html/LDACpp/data/reuters-1/08/50"
+./slda inf "/var/www/html/LDACpp/data/reuters-1/reuters-1-50-test_data.txt" "/var/www/html/LDACpp/data/reuters-1/reuters-1-50-test_labels_int.txt" "/var/www/html/LDACpp/slda/settings.txt" "/var/www/html/LDACpp/data/reuters-1/05/50/final.model" "/var/www/html/LDACpp/data/reuters-1/05/50"
+./slda inf "/var/www/html/LDACpp/data/reuters-1/reuters-1-50-test_data.txt" "/var/www/html/LDACpp/data/reuters-1/reuters-1-50-test_labels_int.txt" "/var/www/html/LDACpp/slda/settings.txt" "/var/www/html/LDACpp/data/reuters-1/02/50/final.model" "/var/www/html/LDACpp/data/reuters-1/02/50"
+
+./slda inf "/var/www/html/LDACpp/data/reuters-1/reuters-1-75-test_data.txt" "/var/www/html/LDACpp/data/reuters-1/reuters-1-75-test_labels_int.txt" "/var/www/html/LDACpp/slda/settings.txt" "/var/www/html/LDACpp/data/reuters-1/08/75/final.model" "/var/www/html/LDACpp/data/reuters-1/08/75"
+./slda inf "/var/www/html/LDACpp/data/reuters-1/reuters-1-75-test_data.txt" "/var/www/html/LDACpp/data/reuters-1/reuters-1-75-test_labels_int.txt" "/var/www/html/LDACpp/slda/settings.txt" "/var/www/html/LDACpp/data/reuters-1/05/75/final.model" "/var/www/html/LDACpp/data/reuters-1/05/75"
+./slda inf "/var/www/html/LDACpp/data/reuters-1/reuters-1-75-test_data.txt" "/var/www/html/LDACpp/data/reuters-1/reuters-1-75-test_labels_int.txt" "/var/www/html/LDACpp/slda/settings.txt" "/var/www/html/LDACpp/data/reuters-1/02/75/final.model" "/var/www/html/LDACpp/data/reuters-1/02/75"
+
+
+6 - Convert files into textsimilarity datasetrepresentation
+
+(DEV)
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-1/08/50
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-1/08/75
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-1/08/80
+
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-1/05/50
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-1/05/75
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-1/05/80
+
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-1/02/50
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-1/02/75
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-1/02/80
+
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-2/08/50
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-2/08/75
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-2/08/80
+
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-2/05/50
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-2/05/75
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-2/05/80
+
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-2/02/50
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-2/02/75
+http://jocan3.com/textsimilarity_dev-api/saveLDARepresentation/reuters-2/02/80
+
+

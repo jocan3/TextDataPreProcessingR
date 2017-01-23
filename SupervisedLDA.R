@@ -23,8 +23,11 @@ trainSize <- as.double(args[4])
 alphaValue <- args[5]
 betaValue <- args[6]
 batch <- args[7]
+e.iterations <- as.numeric(args[8])
+m.iterations <- as.numeric(args[9])
+variance.value <- args[10]
 
-description <- paste("LDA",datasetName, ". alpha:",toString(alphaValue),". beta:",toString(betaValue),". Train:",toString(trainSize*100),"%",sep=" ")
+description <- paste("LDA",datasetName, ". alpha:",toString(alphaValue),". beta:",toString(betaValue),". Train:",toString(trainSize*100),"%. Iterations:",e.iterations,"-",m.iterations,". Variance:",variance.value,".",sep=" ")
 # 
 # # trainSize <- 0.6
 # # datasetName <- "Oil-test"
@@ -40,10 +43,10 @@ description <- paste("LDA",datasetName, ". alpha:",toString(alphaValue),". beta:
 
 OriginaldataSet = read.csv(inputFile)  # read csv file 
 
- 
- set.seed(as.numeric(Sys.time()))
- inTrain <- createDataPartition(OriginaldataSet$class, p = trainSize, 
-                                list = FALSE)
+
+set.seed(as.numeric(Sys.time()))
+inTrain <- createDataPartition(OriginaldataSet$class, p = trainSize, 
+                               list = FALSE)
 
 
 dataSet <- OriginaldataSet[inTrain,]
@@ -87,12 +90,14 @@ annotations.levels <-levels(annotations)
 
 num.topics <- length(annotations.levels)
 
-## Initialize the params (initial coeficientes to be used by the EM step)
-params <- sample(annotations, num.topics, replace=TRUE)
-
 annotations.numeric <- as.numeric(annotations)
 
-variance <- var(annotations.numeric)
+## Initialize the params (initial coeficientes to be used by the EM step)
+params <- sample(annotations.numeric, num.topics, replace=TRUE)
+
+
+variance.value <- var(annotations.numeric)
+
 
 result <- NULL
 attempt <- 1
@@ -102,12 +107,12 @@ while( is.null(result) && attempt <= 3 ) {
     result <- slda.em(documents=corpus,
                       K=num.topics,
                       vocab=vocab,
-                      num.e.iterations=100,
-                      num.m.iterations=50,
+                      num.e.iterations=10,
+                      num.m.iterations=4,
                       alpha=alphaValue, eta=betaValue,
                       annotations.numeric,
                       params,
-                      variance=variance,
+                      variance=variance.value,
                       logistic=FALSE,
                       method="sLDA")
   )
@@ -185,14 +190,16 @@ while( is.null(predictions) && attempt <= 3 ) {
                                 result$topics,
                                 result$model,
                                 alpha = alphaValue,
-                                eta= betaValue)
+                                eta= betaValue,
+                                num.iterations = e.iterations,
+                                average.iterations = m.iterations)
   )
 } 
 
 
 coefs = coef(result$model)
 result.topics = result$topics
-doc_sums_count <- slda.predict.docsums(corpus.test, result$topics, alphaValue, betaValue, 100, 50, 0L)
+doc_sums_count <- slda.predict.docsums(corpus.test, result$topics, alphaValue, betaValue, e.iterations, m.iterations, 0L)
 props <- t(doc_sums_count)/colSums(doc_sums_count)
 
 
@@ -251,5 +258,4 @@ for (i in 1:length(coefs)){
 
 
 ###################################################################################################################
-
 
