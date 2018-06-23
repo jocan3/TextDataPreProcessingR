@@ -1,6 +1,11 @@
+dir.create("log")
+logFile <- paste("log/log-",as.numeric(Sys.time()),".txt", sep = "")
+file.create(logFile)
+sink(logFile,append=FALSE, split=FALSE)
 
 library(RTextTools)
 library(RMySQL)
+library(caret)
 
 args = commandArgs(trailingOnly=TRUE)
 
@@ -18,6 +23,9 @@ inputFile <- args[1]
 datasetName <- args[2]
 connectionsFile <- args[3]
 description <- args[4]
+trainSize <- as.double(args[5])
+
+#trainSize <- 0.5
 
 #datasetName <- "Oil-test"
 #datasetName <- "reuters-1" 
@@ -28,39 +36,33 @@ description <- args[4]
 
 #connectionsFile <- "D:/GIT/TextDataPreProcessingR/DBCredentials.R"
 
-dataSet = read.csv(inputFile)  # read csv file 
 
-matrix <- create_matrix(dataSet$text, language="english",
-                        removeNumbers=TRUE, stemWords=TRUE, removeStopwords=TRUE, 
-                          stripWhitespace=TRUE, toLower=TRUE, weighting=tm::weightTfIdf)
-
-matrixNoTFIDF <- create_matrix(dataSet$text, language="english",
-                        removeNumbers=TRUE, stemWords=TRUE, removeStopwords=TRUE, 
-                        stripWhitespace=TRUE, toLower=TRUE)
+OriginaldataSet = read.csv(inputFile)  # read csv file 
 
 
-mat <- matrix(, nrow = matrix$nrow, ncol = matrix$ncol)
+set.seed(as.numeric(Sys.time()))
+inTrain <- createDataPartition(OriginaldataSet$class, p = trainSize, 
+                               list = FALSE)
+
+
+dataSet <- OriginaldataSet[inTrain,]
+
+dataset.test <- OriginaldataSet[-inTrain,]
+
+matrix.original <- create_matrix(OriginaldataSet$text, language="english",
+                        removeNumbers=TRUE, stemWords=TRUE, removeStopwords=TRUE,
+                        stripWhitespace=TRUE, toLower=TRUE,
+                        removePunctuation=TRUE, removeSparseTerms=0)
+
+matrix <- matrix.original[inTrain,]
+matrixTest <- matrix.original[-inTrain,]
 
 classes <- dataSet$class
 texts <- dataSet$text
 
-for (i in 1:length(matrix$i)){
-  mat[matrix$i[i],matrix$j[i]] <- matrix$v[i]
-}
+classes.test <- dataset.test$class
+texts.test <- dataset.test$text
 
-dimnames(mat) = list( 
-     matrix$dimnames$Docs,         # row names 
-     matrix$dimnames$Terms) # column names 
-
-matNoTFIDF <- matrix(, nrow = matrixNoTFIDF$nrow, ncol = matrixNoTFIDF$ncol)
-
-for (i in 1:length(matrixNoTFIDF$i)){
-  matNoTFIDF[matrixNoTFIDF$i[i],matrixNoTFIDF$j[i]] <- matrixNoTFIDF$v[i]
-}
-
-dimnames(matNoTFIDF) = list( 
-  matrixNoTFIDF$dimnames$Docs,         # row names 
-  matrixNoTFIDF$dimnames$Terms) # column names 
 
 source(connectionsFile)
 
@@ -72,7 +74,7 @@ dat <- dbFetch(res)
 
 datasetId <- dat$id
 
-queryStr = paste("Insert into datasetrepresentation(dataset,representation,description,status) values(",datasetId,",",representation,",'",description," with TF-IDF','running');",sep = "")
+queryStr = paste("Insert into datasetrepresentation(dataset,representation,description,status) values(",datasetId,",",representation,",'",description," Train','running');",sep = "")
 dbSendQuery(mydb, queryStr)
 
 queryStr = paste("SELECT MAX(id) as id FROM datasetrepresentation", sep="")
@@ -92,12 +94,12 @@ dbSendQuery(mydb, queryStr)
 
 
 for (i in 1:matrix$nrow){
-    line <- matrix[i,1]
-    for (j in 2:matrix$ncol){
-      line <- paste(line,matrix[i,j],sep = ",")
-    }
-    queryStr = paste("Insert into document(datasetRepresentation,original,value,class) values(",datasetrepresentation,",'",texts[i],"','",line,"','",classes[i],"');",sep = "")
-    dbSendQuery(mydb, queryStr)
+  line <- matrix[i,1]
+  for (j in 2:matrix$ncol){
+    line <- paste(line,matrix[i,j],sep = ",")
+  }
+  queryStr = paste("Insert into document(datasetRepresentation,original,value,class) values(",datasetrepresentation,",'",texts[i],"','",line,"','",classes[i],"');",sep = "")
+  dbSendQuery(mydb, queryStr)
 }
 
 
@@ -106,7 +108,7 @@ queryStr = paste("update datasetrepresentation set status='successful' where id=
 dbSendQuery(mydb, queryStr)
 
 
-queryStr = paste("Insert into datasetrepresentation(dataset,representation,description,status) values(",datasetId,",",representation,",'",description," without TF-IDF','running');",sep = "")
+queryStr = paste("Insert into datasetrepresentation(dataset,representation,description,status) values(",datasetId,",",representation,",'",description," Test','running');",sep = "")
 dbSendQuery(mydb, queryStr)
 
 queryStr = paste("SELECT MAX(id) as id FROM datasetrepresentation", sep="")
@@ -116,25 +118,25 @@ dat <- dbFetch(res)
 datasetrepresentation <- dat$id
 
 
-line <- matrixNoTFIDF$dimnames$Terms[1]
-for (i in 2:matrixNoTFIDF$ncol){
-  line <- paste(line,matrixNoTFIDF$dimnames$Terms[i],sep = ",")
+line <- matrixTest$dimnames$Terms[1]
+for (i in 2:matrixTest$ncol){
+  line <- paste(line,matrixTest$dimnames$Terms[i],sep = ",")
 }
 
 
 queryStr = paste("Insert into document(datasetRepresentation,original,value,class) values(",datasetrepresentation,",'N/A','",line,"','N/A');",sep = "")
 dbSendQuery(mydb, queryStr)
 
-for (i in 1:matrixNoTFIDF$nrow){
-  line <- matrixNoTFIDF[i,1]
-  for (j in 2:matrixNoTFIDF$ncol){
-    line <- paste(line,matrixNoTFIDF[i,j],sep = ",")
+for (i in 1:matrixTest$nrow){
+  line <- matrixTest[i,1]
+  for (j in 2:matrixTest$ncol){
+    line <- paste(line,matrixTest[i,j],sep = ",")
   }
-  queryStr = paste("Insert into document(datasetRepresentation,original,value,class) values(",datasetrepresentation,",'",texts[i],"','",line,"','",classes[i],"');",sep = "")
+  queryStr = paste("Insert into document(datasetRepresentation,original,value,class) values(",datasetrepresentation,",'",texts.test[i],"','",line,"','",classes.test[i],"');",sep = "")
   dbSendQuery(mydb, queryStr)
 }
 
 queryStr = paste("update datasetrepresentation set status='successful' where id=",datasetrepresentation,";",sep = "")
 dbSendQuery(mydb, queryStr)
 
-
+sink()

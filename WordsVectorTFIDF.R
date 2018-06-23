@@ -51,7 +51,13 @@ dataset.test <- OriginaldataSet[-inTrain,]
 
 matrix.original <- create_matrix(OriginaldataSet$text, language="english",
                                  removeNumbers=TRUE, stemWords=TRUE, removeStopwords=TRUE, 
-                                 stripWhitespace=TRUE, toLower=TRUE, weighting=tm::weightTfIdf)
+                                 stripWhitespace=TRUE, toLower=TRUE, weighting=tm::weightTfIdf,
+                                 removePunctuation=TRUE, removeSparseTerms=0)
+
+# matrix.original <- create_matrix(OriginaldataSet$text, language="english",
+#                                  removeNumbers=TRUE, stemWords=TRUE, removeStopwords=TRUE, 
+#                                  stripWhitespace=TRUE, toLower=TRUE, weighting=tm::weightTfIdf)
+
 
 matrix <- matrix.original[inTrain,]
 matrixTest <- matrix.original[-inTrain,]
